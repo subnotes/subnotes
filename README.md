@@ -314,4 +314,5 @@ Initial thoughts...
 * Initial planned "flagship" extensions
   * *markdown* (meta) (support for CommonMark)
     * *markdown-math* (support for Tex/LaTex markdown extension)
-  * *flashcards* (node) (adding flashcards that support spaced repetition to Notes and Topics)
+  * *flashcards* (node) (adds flashcards to Notes and Topics)
+    * *flashcards-spaced* (adds support for spaced repetition)
