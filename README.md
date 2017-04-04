@@ -54,7 +54,7 @@ A *Notebook* MUST have a *notebook* property, which must be a *Topic* node, but 
 
 ### Beyond Trees with JSON Pointers
 
-A tree structure can be great for organizing things, but sometimes it can be too rigid. For example, if you had four folders (*Topics*) called "Tall", "Short", "Narrow", and "Wide", you may want to place a specific *Note* or *Topic* in two of those folders. A normal tree structure wouldn't allow this. Thankfully there are JSON Pointers. You can think of them as links. In SubNotes a *subtopic* can be a JSON Pointer to another *Topic* (as long as it is not one of its ancestors). This is called a *TopicPointer*. Also, a *subnote* can be a JSON Pointer to another *Note*. This is called a *NotePointer* and can facilitate "tagging" of *Notes*, as shown in one of the following examples.
+A tree structure can be great for organizing things, but sometimes it can be too rigid. Thankfully there are JSON Pointers. You can think of them as links. In SubNotes a *subtopic* can be a JSON Pointer to another *Topic* (as long as it is not one of its ancestors). This is called a *TopicPointer*. Also, a *subnote* can be a JSON Pointer to another *Note*. This is called a *NotePointer*.
 
 *Example Notebook - Note and Topic Pointers*
 
@@ -73,27 +73,6 @@ A tree structure can be great for organizing things, but sometimes it can be too
     |-{Note 1}                |
     |-{TopicPointer 2.1} -----+
            
-```
-
-*Example Notebook - "Tagging" with NotePointers*
-
-```
-{Notebook}
- |-{Note 1 "tagged C"} <--------------+
- |-{Note 2 "tagged A,B"} <------+     |
- |-{Note 3 "not tagged"}        |     |
- |-{Note 4 "tagged A,C"} <------|--+  |  
- |-{Note 5 "tagged C"} <--------|--|--|--+
- |                              |  |  |  |
- |-{Topic 1 "tag A"}            |  |  |  |
- |  |-{NotePointer 1} ----------+  |  |  |
- |  |-{NotePointer 2} ----------|--+  |  |
- |-{Topic 2 "tag B")}           |  |  |  |
- |  |-{NotePointer 1} ----------+  |  |  |
- |-{Topic 3 "tag C"}               |  |  |
-    |-{NotePointer 1} -------------+  |  |
-    |-{NotePointer 2} ----------------+  |
-    |-{NotePointer 3} -------------------+
 ```
 
 ### Notebook
