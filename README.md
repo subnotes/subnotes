@@ -195,7 +195,7 @@ A tree structure can be great for organizing things, but sometimes it can be too
   "topicPointer":{
     "description": "A JSON pointer to a Topic.",
     "type": "string",
-    "pattern": "#\/notebook\/[0-9]{1,}(\/subtopics\/[0-9]{1,}){0,}$"
+    "pattern": "#\/notebook(\/subtopics\/[0-9]{1,}){1,}$"
   }
 }
 ```
@@ -214,7 +214,7 @@ A tree structure can be great for organizing things, but sometimes it can be too
   "notePointer":{
     "description": "A JSON pointer to a Note.",
     "type": "string",
-    "pattern": "#\/notebook\/[0-9]{1,}(\/subtopics\/[0-9]{1,}){0,}(\/subnotes\/[0-9]{1,}){1}$"
+    "pattern": "#\/notebook(\/subtopics\/[0-9]{1,}){0,}(\/subnotes\/[0-9]{1,}){1}$"
   }
 }
 ```
@@ -266,7 +266,7 @@ A tree structure can be great for organizing things, but sometimes it can be too
       {
         "topic": "Countries by alphabetical order",
         "subtopics": [
-          "#/notebook/2/subtopics/0"
+          "#/notebook/subtopics/2/subtopics/0"
         ]
       }
     ]
